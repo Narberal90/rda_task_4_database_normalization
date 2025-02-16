@@ -18,14 +18,14 @@ CREATE TABLE Products (
 CREATE TABLE Warehouses (
     ID INT AUTO_INCREMENT,
     Name VARCHAR(50),
-    Adress VARCHAR(50),
+    Address VARCHAR(50),
     CountryID INT,
     FOREIGN KEY (CountryID) REFERENCES Countries (ID),
     PRIMARY KEY (ID)
 );
 
 CREATE TABLE ProductInventory (
-    ID INT,
+    ID INT AUTO_INCREMENT,
     ProductID INT,
     WarehouseAmount INT,
     WarehouseID INT,
@@ -46,12 +46,12 @@ VALUES
     (2, 'Country2');
 
 INSERT INTO
-    Warehouses (Name, Adress, CountryID)
+    Warehouses (Name, Address, CountryID)
 VALUES
     ('Warehouse-1', 'City-1, Street-1', 1);
 
 INSERT INTO
-    Warehouses (Name, Adress, CountryID)
+    Warehouses (Name, Address, CountryID)
 VALUES
     ('Warehouse-2', 'City-2, Street-2', 2);
 
